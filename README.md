@@ -1,36 +1,78 @@
-Role Name
+sap_hana_cockpit_deployment
 =========
 
-A brief description of the role goes here.
+SAP HANA cockpit provides a single point of access to a range of tools for administration and detailed monitoring of multiple, individual and tenant SAP HANA databases, and also integrates the SQL development capabilities required by administrators. This role is to install SAP HANA Cockpit on RHEL 8.x systems. 
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+This role is intended to use on a RHEL system that gets SAP software. So your system needs to be installed with at least the RHEL core packages, properly registered and prepared for HANA or Netweaver installation.
+
+It needs access to the software repositories required to install SAP HANA (see also: How to subscribe SAP HANA systems to the Update Services for SAP Solutions)
+
+You can use the redhat_sap.sap_rhsm Galaxy Role to automate this process
+
+To install SAP software on Red Hat Enterprise Linux you need some additional packages which come in a special repository. To get this repository you need to have one of the following products:
+
+* RHEL for SAP Solutions (premium, standard, developer Edition)
+* RHEL for Business Partner NFRs
+
+Click here to achieve a personal developer edition of RHEL for SAP Solutions. Please register as a developer and download the developer edition.
+
+* Registration Link : Here you can either register a new personal account or link it to an already existing personal Red Hat Network account.
+* Download Link: Here you can download the Installation DVD for RHEL with your previously registered account
+
+NOTE: This is a regular RHEL installation DVD as RHEL for SAP Solutions is no additional product but only a special bundling. The subscription grants you access to the additional packages through our content delivery network(CDN) after installation.
+
+It is also important that your disks are setup according to the SAP storage requirements for SAP HANA. This BLOG is also quite helpful when sizing HANA systems.
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+sap_hana_cockpit_deployment_sar_local_path
+
+sap_hana_cockpit_deployment_sar_file_name
+
+sap_hana_cockpit_deployment_clean_tmp_directory
+
+sap_hana_cockpit_deployment_xs_org_password
+
+sap_hana_cockpit_deployment_sapcar_local_path
+
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+Before using this role ensure your system has been configured properly to run SAP applications.
+
+You can use the supported role sap-preconfigure comming with RHEL 7 and 8 with RHEL for SAP Solutions Subscription
+
+The upstream version of this role can be found here
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+         - { role: sap_hana_cockpit_deployment }
+
+Example Inventory
+----------------
+
+sap_hana_cockpit_deployment_sar_local_path: "{{ sap_hana_mediacheck_mountpoint }}"
+
+sap_hana_cockpit_deployment_sar_file_name: "SAPHANACOCKPIT00P_12-70002299.SAR"
+
+sap_hana_cockpit_deployment_clean_tmp_directory: true
+
+sap_hana_cockpit_deployment_common_master_password: "MyPassw0rd!"
+
+sap_hana_cockpit_deployment_sapcar_local_path: "<path to SAPCAR>"
 
 License
 -------
 
-BSD
+GPLv3
 
 Author Information
 ------------------
