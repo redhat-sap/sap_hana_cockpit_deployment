@@ -2,14 +2,14 @@
 
 - name: Copy SAR based SAPHANACOCKPIT to the target host
   copy:
-    src: "{{ sap_hana_cockpit_deployment_sar_local_path }}/{{ sap_hana_cockpit_sar_file_name }}"
-    dest: "{{ sap_hana_cockpit_deployment_tmp_directory }}/{{ sap_hana_cockpit_sar_file_name }}"
+    src: "{{ sap_hana_cockpit_deployment_sar_local_path }}/{{ sap_hana_cockpit_deployment_sar_file_name }}"
+    dest: "{{ sap_hana_cockpit_deployment_tmp_directory }}/{{ sap_hana_cockpit_deployment_sar_file_name }}"
     remote_src: yes
 
 - name: Copy SAPCAR tool to the target host
   copy:
-    src: "{{ sap_hana_cockpit_deployment_sapcar_local_path }}/{{ sap_hana_cockpit_sapcar_file_name }}"
-    dest: "{{ sap_hana_cockpit_deployment_tmp_directory }}/{{ sap_hana_cockpit_sapcar_file_name }}"
+    src: "{{ sap_hana_cockpit_deployment_sapcar_local_path }}/{{ sap_hana_cockpit_deployment_sapcar_file_name }}"
+    dest: "{{ sap_hana_cockpit_deployment_tmp_directory }}/{{ sap_hana_cockpit_deployment_sapcar_file_name }}"
     mode: '0755'
     remote_src: yes
 

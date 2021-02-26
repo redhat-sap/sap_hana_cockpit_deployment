@@ -15,6 +15,6 @@ sap_hana_cockpit_deployment_clean_tmp_directory: false
 ansible_become: true
 
 # Set up the SAPHANACOCKPIT passwords
-sap_hana_cockpit_deployment_system_user_password: {{ sap_hana_cockpit_common_master_password }}
-sap_hana_cockpit_deployment_xs_org_password: {{ sap_hana_cockpit_common_master_password }}
-sap_hana_cockpit_deployment_system_admin_password: {{ sap_hana_cockpit_common_master_password }}
+sap_hana_cockpit_deployment_system_user_password: "{{ sap_hana_cockpit_deployment_common_master_password }}"
+sap_hana_cockpit_deployment_xs_org_password: "{{ sap_hana_cockpit_deployment_common_master_password }}"
+sap_hana_cockpit_deployment_system_admin_password: "{{ sap_hana_cockpit_deployment_common_master_password }}"
