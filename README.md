@@ -59,7 +59,7 @@ Example Playbook
 Example Inventory
 ----------------
 
-sap_hana_cockpit_deployment_sar_local_path: "{{ sap_hana_mediacheck_mountpoint }}"
+sap_hana_cockpit_deployment_sar_local_path: "/software/cockpit"
 
 sap_hana_cockpit_deployment_sar_file_name: "SAPHANACOCKPIT00P_12-70002299.SAR"
 
@@ -67,14 +67,14 @@ sap_hana_cockpit_deployment_clean_tmp_directory: true
 
 sap_hana_cockpit_deployment_common_master_password: "MyPassw0rd!"
 
-sap_hana_cockpit_deployment_sapcar_local_path: "<path to SAPCAR>"
+sap_hana_cockpit_deployment_sapcar_local_path: "/software/cockpit"
 
 License
 -------
 
-GPLv3
+Apache
 
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Red Hat SAP Community of Practice

@@ -1,5 +1,5 @@
 ---
-# Ensure {{ sap_hana_cockpit_tmp_directory }} directory is removed from the target host
+# Ensure {{ sap_hana_cockpit_deployment_tmp_directory }} directory is removed from the target host
 - name: Ensure {{ sap_hana_cockpit_deployment_tmp_directory }} directory does not exist
   file:
     path: "{{ sap_hana_cockpit_deployment_tmp_directory }}"
