@@ -4,13 +4,14 @@
   copy:
     src: "{{ sap_hana_cockpit_deployment_sar_local_path }}/{{ sap_hana_cockpit_deployment_sar_file_name }}"
     dest: "{{ sap_hana_cockpit_deployment_tmp_directory }}/{{ sap_hana_cockpit_deployment_sar_file_name }}"
+    mode: 0755
     remote_src: yes
 
 - name: Copy SAPCAR tool to the target host
   copy:
     src: "{{ sap_hana_cockpit_deployment_sapcar_local_path }}/{{ sap_hana_cockpit_deployment_sapcar_file_name }}"
     dest: "{{ sap_hana_cockpit_deployment_tmp_directory }}/{{ sap_hana_cockpit_deployment_sapcar_file_name }}"
-    mode: '0755'
+    mode: 0755
     remote_src: yes
 
 - name: Extract the SAPHANACOCKPIT archive using SAPCAR
@@ -32,6 +33,7 @@
   template:
     src: "{{ role_path }}/templates/configfile.j2"
     dest: "{{ tmpdir.path }}/configfile.cfg"
+    mode: 0755
   register: cftemplate
 
 - name: Install SAPHANACOCKPIT

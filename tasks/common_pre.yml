@@ -9,6 +9,6 @@
 
 # Install compat-openssl10
 - name: Ensure compat-openssl10 installed
-  yum: 
+  yum:
     name: compat-openssl10
     state: present
