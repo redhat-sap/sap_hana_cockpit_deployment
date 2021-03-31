@@ -1,4 +1,4 @@
-# sap_hana_cockpit_deployment ![Ansible Lint](https://github.com/redhat-sap/sap_hana_cockpit_deployment/workflows/Ansible%20Lint/badge.svg?branch=master) ![Ansible Galaxy Import](https://github.com/redhat-sap/sap_hana_cockpit_deployment/workflows/Ansible%20Galaxy%20Import/badge.svg?branch=master)
+# sap_hana_cockpit_deployment ![Ansible Lint](https://github.com/redhat-sap/sap_hana_cockpit_deployment/workflows/Ansible%20Lint/badge.svg?branch=main) ![Ansible Galaxy Import](https://github.com/redhat-sap/sap_hana_cockpit_deployment/workflows/Ansible%20Galaxy%20Import/badge.svg?branch=main)
 
 SAP HANA cockpit provides a single point of access to a range of tools for administration and detailed monitoring of multiple, individual and tenant SAP HANA databases, and also integrates the SQL development capabilities required by administrators. This role is to install SAP HANA Cockpit on RHEL 8.x systems. 
 
