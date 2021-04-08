@@ -71,7 +71,7 @@ sap_hana_cockpit_deployment_sapcar_local_path: "/software/cockpit"
 License
 -------
 
-Apache
+Apache License 2.0
 
 Author Information
 ------------------
